@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Котейка - Подбор отеля для кошек</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <button class="header__nav-toggle toggle" aria-label="Переключение меню"></button>
+
+      <img class="header__logo svg logo" src="img/svg/logo.svg" width="64" height="52" alt="Логотип Котейка">
+
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">Почему мы?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Номера</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Как нас найти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="visually-hidden">Котейка - сайт подбора отеля</h1>
+
+    <div class="container">
+
+      <section class="catalog">
+
+        <h2 class="catalog__title h2">Наши номера</h2>
+        <div class="catalog__wrapper">
+          <aside class="catalog__sidebar filter">
+            <form action="#" class="filter__form" method="post">
+              <fieldset class="filter__fieldset">
+                <legend class="filter__title">Цена за сутки,₽</legend>
+
+                <div class="filter__wrapper">
+                  <div class="filter__input-box">
+                    <label for="price-from">от</label>
+                    <input class="filter__input" type="number" name="price-from" id="price-from"
+                    value="100" min="0">
+                  </div>
+                  <div class="filter__input-box">
+                    <label for="price-to">до</label>
+                    <input class="filter__input" type="number" name="price-to" id="price-to"
+                     value="600" min="0">
+                  </div>
+                </div>
+
+              </fieldset>
+
+              <fieldset class="filter__fieldset filter__area">
+                <legend class="filter__title">Площадь</legend>
+
+                <ul class="filter__list">
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="0,63 м2"
+                        name="area"
+                        id="checkbox-1">
+                      <label class="checkbox__label" for="checkbox-1">
+                        0,63 м2
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="0,90 м2"
+                        name="area"
+                        id="checkbox-2">
+                      <label class="checkbox__label" for="checkbox-2">
+                        0,90 м2
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="1,13 м2"
+                        name="area"
+                        id="checkbox-3">
+                      <label class="checkbox__label" for="checkbox-3">
+                        1,13 м2
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="1,56 м2"
+                        name="area"
+                        id="checkbox-4">
+                      <label class="checkbox__label" for="checkbox-4">
+                        1,56 м2
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="2,56 м2"
+                        name="area"
+                        id="checkbox-5">
+                      <label class="checkbox__label" for="checkbox-5">
+                        2,56 м2
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="2,88 м2"
+                        name="area"
+                        id="checkbox-6">
+                      <label class="checkbox__label" for="checkbox-6">
+                        2,88 м2
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+
+              </fieldset>
+              <fieldset class="filter__fieldset">
+                <legend class="filter__title">Оснащение номера</legend>
+
+                <ul class="filter__list">
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="Пустой номер"
+                        name="equipment"
+                        id="checkbox-7">
+                      <label class="checkbox__label" for="checkbox-7">
+                        Пустой номер
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="Лежак"
+                        name="equipment"
+                        id="checkbox-8">
+                      <label class="checkbox__label" for="checkbox-8">
+                        Лежак
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="Когтеточка"
+                        name="equipment"
+                        id="checkbox-9">
+                      <label class="checkbox__label" for="checkbox-9">
+                        Когтеточка
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="Игровой комплекс"
+                        name="equipment"
+                        id="checkbox-10">
+                      <label class="checkbox__label" for="checkbox-10">
+                        Игровой комплекс
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter__list-item">
+                    <div class="checkbox">
+                      <input class="checkbox__input visually-hidden"
+                        type="checkbox"
+                        value="Домик"
+                        name="equipment"
+                        id="checkbox-11">
+                      <label class="checkbox__label" for="checkbox-11">
+                        Домик
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+
+              </fieldset>
+              <button type="submit" class="filter__btn btn btn--submit">Применить</button>
+              <button type="reset" class="filter__btn filter__btn--hidden btn btn--reset">Сбросить фильтр</button>
+            </form>
+          </aside>
+
+          <section class="catalog__list">
+
+            <div class="catalog__sort sort">
+              <button type="button" class="sort__toggler" aria-label="Кнопка переключения меню сортировки"></button>
+              <ul class="sort__list">
+                 <li class="sort__item">
+                   <a href="#" class="sort__anchor">По площади</a>
+                 </li>
+                 <li class="sort__item">
+                   <a href="#" class="sort__anchor sort__anchor--reverse">По площади</a>
+                 </li>
+                 <li class="sort__item">
+                   <a href="#" class="sort__anchor">По цене</a>
+                 </li>
+                 <li class="sort__item">
+                   <a href="#" class="sort__anchor sort__anchor--reverse">По цене</a>
+                 </li>
+               </ul>
+            </div>
+            <!-- 1 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-1.jpg"
+              srcset="img/catalog-img-1@2x.jpg 2x" alt="Номер Эконом">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Эконом</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">0,63 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Пустой номер" class="card__equip card__equip--empty"></li>
+                    </ul>
+                  </li>
+                  <li class="card__detail">
+                    Цена за сутки: <span class="card__price">100₽</span>
+                  </li>
+                </ul>
+
+                <a href="!#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-2.jpg"
+              srcset="img/catalog-img-2@2x.jpg 2x" alt="Номер Эконом плюс">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Эконом плюс</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Размеры (ШхГхВ) - 90х100х180 см
+                  </li>
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">0,90 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Лежак" class="card__equip card__equip--bed"></li>
+                      <li title="Когтеточка" class="card__equip card__equip--scratching"></li>
+                    </ul>
+                  </li>
+                  <li class="card__detail">
+                    Цена за сутки: <span class="card__price">200₽</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-3.jpg"
+              srcset="img/catalog-img-3@2x.jpg 2x" alt="Номер Комфорт">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Комфорт</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Размеры (ШхГхВ) - 100х125х180 см
+                  </li>
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">1,13 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Лежак" class="card__equip card__equip--bed"></li>
+                      <li title="Когтеточка" class="card__equip card__equip--scratching"></li>
+                      <li title="Игровой комплекс" class="card__equip card__equip--game"></li>
+                    </ul>
+                  </li>
+                  <li class="card__detail">
+                    Цена за сутки: <span class="card__price">250₽</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-4.jpg"
+              srcset="img/catalog-img-1@2x.jpg 2x" alt="Номер Сьют">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Сьют</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Размеры (ШхГхВ) - 125х125х180 см
+                  </li>
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">1,56 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Лежак" class="card__equip card__equip--bed"></li>
+                      <li title="Когтеточка" class="card__equip card__equip--scratching"></li>
+                      <li title="Игровой комплекс" class="card__equip card__equip--game"></li>
+                    </ul>
+                  </li>
+                  <li class="card__detail">
+                    Цена за сутки: <span class="card__price">350₽</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-5.jpg"
+              srcset="img/catalog-img-5@2x.jpg 2x"
+              alt="Номер Люкс">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Люкс</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Размеры (ШхГхВ) - 160х160х180 см
+                  </li>
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">2,56 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Лежак" class="card__equip card__equip--bed"></li>
+                      <li title="Когтеточка" class="card__equip card__equip--scratching"></li>
+                      <li title="Игровой комплекс" class="card__equip card__equip--game"></li>
+                      <li title="Домик" class="card__equip card__equip--house"></li>
+                    </ul>
+                  </li>
+                  <li class="card__detail">
+                    Цена за сутки: <span class="card__price">500₽</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="catalog__item card">
+              <img class="card__image" src="img/catalog-img-6.jpg"
+              srcset="img/catalog-img-6@2x.jpg 2x"
+              alt="Номер Супер-Люкс">
+
+              <div class="card__wrapper">
+                <h3 class="card__title">Супер-Люкс</h3>
+
+                <ul class="card__details">
+                  <li class="card__detail">
+                    Размеры (ШхГхВ) - 180х160х180 см
+                  </li>
+                  <li class="card__detail">
+                    Площадь - <span class="card__area">2,88 м2</span>
+                  </li>
+                  <li class="card__detail">
+                    Оснащение номера
+                    <ul class="card__room-equipment">
+                      <li title="Лежак" class="card__equip card__equip--bed"></li>
+                      <li title="Когтеточка" class="card__equip card__equip--scratching"></li>
+                      <li title="Игровой комплекс" class="card__equip card__equip--game"></li>
+                      <li title="Домик" class="card__equip card__equip--house"></li>
+                    </ul>
+                  </li class="card__detail">
+                  <li>Цена за сутки: <span class="card__price">600₽</span></li>
+                </ul>
+
+                <a href="#" class="card__book-btn btn">
+                  <span class="card__book-text">Забронировать</span>
+                </a>
+              </div>
+            </article>
+          </section>
+
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__copyright">
+        <p class="footer__text">© Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+
+      <div class="footer__author">
+        Сделано в <a class="footer__creator-link" href="#">Koteyka_Production</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sort = document.querySelector('.sort');
+    const sortToggler = sort.querySelector('.sort__toggler');
+
+    sortToggler.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      sort.classList.toggle('sort--hidden');
+      sortToggler.classList.toggle('sort__toggler--hidden');
+    });
+
+    const navToggle = document.querySelector('.toggle');
+    const nav = document.querySelector('.nav');
+
+    navToggle.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      nav.classList.toggle('nav--shown');
+      navToggle.classList.toggle('toggle--close');
+    });
+
+    const filter = document.querySelector('.filter');
+    const form = filter.querySelector('.filter__form');
+    const formResetBtn = form.querySelector('.filter__btn[type="reset"]');
+
+    const catalog = document.querySelector('.catalog__list');
+    const cards = document.querySelectorAll('.card');
+
+
+    function checkMatch(cardItem, filterArr) {
+      return (filterArr.includes(cardItem) || filterArr.length === 0);
+    }
+
+    function checkPrice(price, min, max) {
+      return price >= +min && (price <= +max || max === '');
+    }
+
+    form.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      const data = new FormData(form);
+
+      const priceFrom = data.get('price-from');
+      const priceTo = data.get('price-to');
+
+      console.log(typeof priceTo);
+
+      const areaArray = data.getAll('area');
+      const equipArray = data.getAll('equipment');
+
+      const result = [];
+
+      cards.forEach((card) => {
+        const cardArea = card.querySelector('.card__area').textContent;
+        const cardEquipCollection = card.querySelectorAll('.card__room-equipment li');
+        const cardEquip = [];
+
+        cardEquipCollection.forEach((item) => {
+          cardEquip.push(item.title);
+        });
+
+        const cardPrice = parseInt(card.querySelector('.card__price').textContent);
+
+        cardEquip.forEach((equip) => {
+          if (checkMatch(equip, equipArray) &&
+            checkMatch(cardArea, areaArray) &&
+            checkPrice(cardPrice, priceFrom, priceTo)) {
+              result.push(card);
+            }
+          });
+
+          card.remove();
+        });
+
+      result.forEach((item) => {
+        catalog.append(item);
+      });
+
+    });
+
+
+    form.addEventListener('change', () => {
+      formResetBtn.classList.remove('filter__btn--hidden');
+    });
+
+    form.addEventListener('reset', () => {
+      cards.forEach((card) => {
+        catalog.append(card);
+      });
+
+      formResetBtn.classList.add('filter__btn--hidden');
+    });
+
+  </script>
+
+</body>
+</html>

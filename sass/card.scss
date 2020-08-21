@@ -1,0 +1,132 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  min-height: 420px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card__image {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding-top: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 25px;
+
+  border: 1px solid #E1E1E1;
+  border-top: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $rubik;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.card__price {
+  padding-left: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.card__area {
+  padding-left: 4px;
+}
+
+.card__details {
+  margin-top: auto;
+}
+
+.card__detail {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+  line-height: 1;
+  transition: all 0.3s;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card__room-equipment {
+  display: flex;
+  margin-left: 10px;
+}
+
+.card__equip {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: no-repeat center;
+  background-size: contain;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--empty {
+    background-image: url('../img/svg/empty.svg');
+  }
+
+  &--bed {
+    background-image: url('../img/svg/bed.svg');
+  }
+
+  &--scratching {
+    background-image: url('../img/svg/scratching.svg');
+  }
+
+  &--game {
+    background-image: url('../img/svg/game.svg');
+  }
+
+  &--house {
+    background-image: url('../img/svg/house.svg');
+  }
+
+}
+
+.card__book-btn {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  &::after {
+    content: '';
+    width: 42px;
+    height: 42px;
+    background: url('../img/svg/paw.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    margin-top: -18px;
+  }
+}
+
+.card__book-text {
+  padding-right: 20px;
+}

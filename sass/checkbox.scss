@@ -1,0 +1,27 @@
+.checkbox__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #E1E1E1;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('../img/svg/check.svg') no-repeat;
+  background-size: 9px 6px;
+  background-position: center;
+
+  @media (max-width: $mob) {
+    background-size: 14px 16px;
+  }
+}

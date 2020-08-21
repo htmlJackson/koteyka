@@ -1,0 +1,39 @@
+.toggle {
+  position: relative;
+  width: 37px;
+  height: 37px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: $black;
+    box-shadow: 0 6px $black,
+                0 12px $black;
+  }
+
+  &--close {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: rotate(-45deg);
+      width: 25px;
+      height: 3px;
+      background: $black;
+      border-radius: 4px;
+    }
+    &::after {
+      box-shadow: none;
+      left: 6px;
+      top: 50%;
+      transform: rotate(45deg);
+      border-radius: 4px;
+    }
+  }
+}

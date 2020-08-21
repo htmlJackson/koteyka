@@ -1,0 +1,77 @@
+$lato: 'Lato', 'Arial', sans-serif;
+$rubik: 'Rubik', 'Arial', sans-serif;
+
+$tablet: 1120px;
+$tablet-sm: 840px;
+$mob: 558px;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: $lato;
+  font-size: 14px;
+  line-height: 22px;
+  color: $black;
+  background: $white;
+
+  @media (max-width: $mob) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.container {
+  width: 1170px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+}
+
+.h2 {
+  font-family: $rubik;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+
+  @media (max-width: $mob) {
+    text-align: center;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
